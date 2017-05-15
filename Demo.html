@@ -7,10 +7,194 @@
 </title>
 </head>
 
-<script type = "text/javascript" src="demo.js"></script>
+<script type = "text/javascript" src="Demo.js"></script>
 
 
 <body>
 Welcome to Java Script~
+
+
+
+第三节：
+
+区分大小写 ： text和Text是两种不一样的标识符 <br />  ...换行符
+
+标识符组成的开头 ： 字母开头 、 下划线开头 、 美元$ 开头
+
+其他组成： a  等等
+
+
+关键字： true false null  作为标识符
+
+进行注释 ： //   /* ... */等进行注释  多行会计注释
+
+字面量 ： ‘单引号’ 字符串   false 布尔格的字面量   /js/gl  正则表达式  null  空对象  对象字面量
+
+对象字面量    （x:1,y:2) 对象字面量  表达式
+数组字面量    {1，2，3，4，5，数组字面量} 表达式
+
+关键字 、 保留字：
+
+  break else new var case finally return void catch for switch 
+
+  abstract enum int short boolean export interface static byte extends long super char final native ...
+
+
+变量 
+  输出 alert（变量） 在弹窗中输出
+  var 声明各种变量   并且可以进行初始化  变量的声明是松散的
+
+  并未进行 输出  未声明变量 系统给出 undefined
+
+  可以初始化 并且 可以改变
+
+  typeof + 变量名  给出 变量的声明类型
+
+  变量名+类型  进行初定义
+
+  不要重复进行 变量名称的重复声明
+
+  作用域~ ... 
+
+  声明多个语句  用 ；， 进行隔开  不同行 可以省略逗号
+
+
+typeof 操作符 
+  检测变量的数据类型  用于变量返回数据类型   返回类型字符串 
+  function 字符串 也可以进行返回 
+
+  没有初始化的变量就是 undefined  返回值
+
+  他的类型返回的 字符串 也是 Undefined 类型 返回的字符串也是 undefined
+
+  boolean 类型 也是 如此  true返回true false返回false  类型 boolean
+
+  number 数字就是 返回数字的值  返回类型字符串 是 number
+
+  object  创建方式 {}  var box={};  创建一个空的对象  空对象 null  
+          返回的值是 [object,Object]  返回字符串 object
+          var box= new Object()
+  function 返回的是函数的名称 打印的是 函数   返回的值 是 function
+
+  可以直接使用字面量
+
+
+Undefined
+  只有一个值  声明变量时 如果没有 进行初始化 那么变量的值就是 undefined
+  未存在的变量和根本不存在的是两个东西    但是typedef 在定义变量时如果有一个返回undefined 时，那么变量都会返回undefined的值 
+  因此必须定义变量的时候就要给她进行赋值
+
+Null
+  表示空对象的引用 
+  如果将来保存对象，那么尽可能地将对象的初始值设置成null  以便咋将来如果对象被使用了，那么就可以直观地用对象的基本信息进行判断
+
+  var box=null;  
+  // 表示你还没有创建对象，但是你先声明和引用而必须初始化的结果声明对象的变量 默认初始化
+
+  字符串类型 创建字符串变量 一开始 不知道初始化   var box=‘’；
+
+  数字初始化 用0 
+
+  boolean 初始化用true 或者 false   
+
+alert （undefined==null）  //null拍派生自undefined  都是空的
+                          //但是两个类型是不一样的  ！== === 数据类型相等符号
+
+boolean 类型 
+  Java是区分大小写的  所以True和true是不一样的
+
+强制转换 与 隐式转换
+  强制转换和C语言是出自一体 而  条件语句的判断语句就是 隐式转换
+  
+
+Number 类型
+  整型：
+    十进制 二进制 八进制 十六进制 //输出按照十进制进行输出
+
+    十进制： var box=1; 十进制的整型  
+    八进制： var box=01;  八进制整型
+    十六进制:var box=0x1; 十六进制
+    二进制： 不能输出的 
+
+  浮点类型：
+    简单的浮点数 和 C语言一样
+    var box= 00.8 会报错
+    var box= .8   有效的
+    有可能将浮点类型转换成为整型     浮点数的最高精度是17位小数
+
+    科学计数法：    用e进行表示 10的n次方
+
+    判断不能使用浮点数进行判断 IDEE的标准问题 做精确的判断
+
+    范围 ： Number.MIN_VALUE Number.MAX_VALUE
+
+    超过范围： +Infinity  -Infinity
+
+    Number.POSITIVE_INFINITY  正无穷
+    Number.NEGATIVE_INFINITY  负无穷
+
+    判断是否超过函数：  isFinite(变量名)
+
+  特殊值：
+
+    NaN 当任何一个数除以0  返回NaN  
+
+    Number.NaN 可以得到这个值
+
+    NaN==NaN  false
+
+    判断是否是NaN  isNaN() 判断是否是NaN  字符串"Lee".isNaN()  true
+
+    isNaN()同样适用于  对象 如果是空的对象  那么就返回true  
+
+
+  三个函数：
+
+    Number()  转型函数 
+    字符串中的简化... 去掉任何多余的东西  
+    是空的：  返回0
+    不含数字的情况下： NaN
+    null ： 返回0
+
+    parseInt() parseFloat() 是仅适用于字符串的对象 
+
+    parseInt():  
+        只能是字符串 其他的都是 NaN  
+        如果第一个不返回数字 就是 NaN
+        56.12  ->  56
+
+        第二个参数： 用于解决进制的问题  规定进制
+
+
+    parseFloat():
+
+        处理浮点数  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
